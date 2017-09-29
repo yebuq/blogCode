@@ -1,7 +1,8 @@
 ---
 title: 关于vue-reource请求出错的坑
 date: 2017-09-04 19:54:00
-  - 技术
+categories:
+  - 开发
 tags:
     - js
     - vue
@@ -10,13 +11,14 @@ tags:
 摘要:
 　　这次分享一个之前碰到的关于vue-resource post请求后台数据出错的坑，希望对大家有帮助，详细如下文。。。
     <div align=center style="overflow:hidden"><img src="../../../../img/2017-9/timg.jpg"  style="display:inline-block;vertical-align:top"></div>
+    <!-- more -->
 正文:
 <h1 style="color:#3a3a3a;">vue-resource与ajax还是有点不同的</h1>
 　　分享一个之前碰到的关于vue-resource post请求后台数据出错的坑。在之前的开发工作中碰到了这么一个问题，在vue中使用vue-resource get请求一切正常，可是当使用post后台数据报错如下图：
 <div align=left style="overflow:hidden"><img src="../../../../img/2017-9/1504526592.jpg"  style="display:inline-block;vertical-align:top"></div>
     然后使用ajax的post请求发现是没问题的？后来网上百度了半天才在这个<a href='http://www.jianshu.com/p/8d66070eac20'>http://www.jianshu.com/p/8d66070eac20</a>简书一个大牛的帖子中找到问题所在。vue-resource默认的post的data是request payload的形式，而我们一般的ajax与form表单的话的data都是formdata的形式，所以跟后台请求的时候有些出入，才导致了数据出错。
 　　解决方案有两种：
-　　1.当然是麻烦后台同学改一下接口的简荣星啦；
+　　1.当然是麻烦后台同学改一下接口的兼容性啦；
 　　2.这才是我今天重点分享的干货，就是在vue里面的main.js中添加如下的代码：
 ~~~
 Vue.config.productionTip = false;
