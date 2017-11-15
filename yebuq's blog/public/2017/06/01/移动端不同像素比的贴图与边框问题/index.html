@@ -9,26 +9,28 @@
   <title>移动端不同像素比的贴图与边框问题 | 耶不q的部落格</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="摘要:    　　开发过移动端的都知道，移动端的设备像素分为物理像素跟设备像素，而且不同型号的设备的物理像素的还不一样，比如iphone6的物理像素就是设备像素的两倍，而iphone6Plus的物理像素则是设备像素的三倍。这就造成了我们在css中所使用的到的px这种相对单位的在移动端的浏览器解析中有了不一样的表现。那为了让我们的项目在不同设备中的表现区别不大，就需要我们做一些工作了。下面我来为大家">
+<meta name="keywords" content="前端,移动端,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端不同像素比的贴图与边框问题">
 <meta property="og:url" content="https://yebuq.github.io/2017/06/01/移动端不同像素比的贴图与边框问题/index.html">
 <meta property="og:site_name" content="耶不q的部落格">
 <meta property="og:description" content="摘要:    　　开发过移动端的都知道，移动端的设备像素分为物理像素跟设备像素，而且不同型号的设备的物理像素的还不一样，比如iphone6的物理像素就是设备像素的两倍，而iphone6Plus的物理像素则是设备像素的三倍。这就造成了我们在css中所使用的到的px这种相对单位的在移动端的浏览器解析中有了不一样的表现。那为了让我们的项目在不同设备中的表现区别不大，就需要我们做一些工作了。下面我来为大家">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601123154.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601115946.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601115955.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601120000.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601120005.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601120010.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601120014.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601120019.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601120023.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601120029.jpg">
-<meta property="og:updated_time" content="2017-08-07T16:09:38.506Z">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601123154.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601115946.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601115955.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601120000.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601120005.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601120010.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601120014.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601120019.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601120023.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-6/20170601120029.jpg">
+<meta property="og:updated_time" content="2017-09-29T06:39:35.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端不同像素比的贴图与边框问题">
 <meta name="twitter:description" content="摘要:    　　开发过移动端的都知道，移动端的设备像素分为物理像素跟设备像素，而且不同型号的设备的物理像素的还不一样，比如iphone6的物理像素就是设备像素的两倍，而iphone6Plus的物理像素则是设备像素的三倍。这就造成了我们在css中所使用的到的px这种相对单位的在移动端的浏览器解析中有了不一样的表现。那为了让我们的项目在不同设备中的表现区别不大，就需要我们做一些工作了。下面我来为大家">
-<meta name="twitter:image" content="https://yebuq.github.io/../../../../img/2017-6/20170601123154.jpg">
+<meta name="twitter:image" content="https://yebuq.github.io/img/2017-6/20170601123154.jpg">
   
     <link rel="alternative" href="/atom.xml" title="耶不q的部落格" type="application/atom+xml">
   
@@ -487,15 +489,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">开篇之作</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+                <a href="javascript:void(0)" class="js-tag color4">啦啦啦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -511,7 +509,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">构造函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">业务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -527,23 +553,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">啦啦啦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mongoDB</a>
+                <a href="javascript:void(0)" class="js-tag color4">聊天室</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -551,7 +561,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">开篇之作</a>
+                <a href="javascript:void(0)" class="js-tag color3">mongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -563,7 +573,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">聊天室</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

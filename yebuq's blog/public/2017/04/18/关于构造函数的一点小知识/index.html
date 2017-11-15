@@ -9,17 +9,19 @@
   <title>关于js复杂类型和构造函数的一点小知识 | 耶不q的部落格</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="摘要:    　　javascript脚本语言在进入v8以后可以说是无所不能，而构造函数更可以说是前端代码逼格化灰常重要的技能，可以大大减少代码的重复性，让我们的js代码看起来更加简洁易懂。然而，逼格越高的东西往往也越不容易理解，所以今天在这里给大家介绍一些关于js的复杂类型和构造函数的一些入门知识。">
+<meta name="keywords" content="js,前端,构造函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于js复杂类型和构造函数的一点小知识">
 <meta property="og:url" content="https://yebuq.github.io/2017/04/18/关于构造函数的一点小知识/index.html">
 <meta property="og:site_name" content="耶不q的部落格">
 <meta property="og:description" content="摘要:    　　javascript脚本语言在进入v8以后可以说是无所不能，而构造函数更可以说是前端代码逼格化灰常重要的技能，可以大大减少代码的重复性，让我们的js代码看起来更加简洁易懂。然而，逼格越高的东西往往也越不容易理解，所以今天在这里给大家介绍一些关于js的复杂类型和构造函数的一些入门知识。">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-4/58842726ce2d2.jpg">
-<meta property="og:updated_time" content="2017-05-02T06:57:47.078Z">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-4/58842726ce2d2.jpg">
+<meta property="og:updated_time" content="2017-09-29T06:39:35.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于js复杂类型和构造函数的一点小知识">
 <meta name="twitter:description" content="摘要:    　　javascript脚本语言在进入v8以后可以说是无所不能，而构造函数更可以说是前端代码逼格化灰常重要的技能，可以大大减少代码的重复性，让我们的js代码看起来更加简洁易懂。然而，逼格越高的东西往往也越不容易理解，所以今天在这里给大家介绍一些关于js的复杂类型和构造函数的一些入门知识。">
-<meta name="twitter:image" content="https://yebuq.github.io/../../../../img/2017-4/58842726ce2d2.jpg">
+<meta name="twitter:image" content="https://yebuq.github.io/img/2017-4/58842726ce2d2.jpg">
   
     <link rel="alternative" href="/atom.xml" title="耶不q的部落格" type="application/atom+xml">
   
@@ -244,11 +246,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -479,15 +481,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">开篇之作</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+                <a href="javascript:void(0)" class="js-tag color4">啦啦啦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -503,7 +501,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">构造函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">业务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -519,23 +545,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">啦啦啦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mongoDB</a>
+                <a href="javascript:void(0)" class="js-tag color4">聊天室</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,7 +553,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">开篇之作</a>
+                <a href="javascript:void(0)" class="js-tag color3">mongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,7 +565,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">聊天室</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

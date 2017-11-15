@@ -9,18 +9,20 @@
   <title>关于ajax如何提交照片等file类型的文件 | 耶不q的部落格</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="摘要:    　　好久没有更新博文了。。。感觉是时候分享一波小技术了o(^▽^)o，嗯今天就分享一个关于项目中如何用ajax上传图片的小知识。。你准备好了吗。。。？？">
+<meta name="keywords" content="前端,文件上传,ajax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于ajax如何提交照片等file类型的文件">
 <meta property="og:url" content="https://yebuq.github.io/2017/03/29/关于ajax如何提交照片等file类型的文件/index.html">
 <meta property="og:site_name" content="耶不q的部落格">
 <meta property="og:description" content="摘要:    　　好久没有更新博文了。。。感觉是时候分享一波小技术了o(^▽^)o，嗯今天就分享一个关于项目中如何用ajax上传图片的小知识。。你准备好了吗。。。？？">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-3/6aa2976egx6CHgSChhS88&690.jpg">
-<meta property="og:image" content="https://yebuq.github.io/../../../../img/2017-3/ChMkJlcZuB-ILohjABj4B9nSpLsAAQZdAG1MEUAGPgf978.jpg">
-<meta property="og:updated_time" content="2017-04-06T03:31:54.193Z">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-3/6aa2976egx6CHgSChhS88&690.jpg">
+<meta property="og:image" content="https://yebuq.github.io/img/2017-3/ChMkJlcZuB-ILohjABj4B9nSpLsAAQZdAG1MEUAGPgf978.jpg">
+<meta property="og:updated_time" content="2017-09-29T06:39:35.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于ajax如何提交照片等file类型的文件">
 <meta name="twitter:description" content="摘要:    　　好久没有更新博文了。。。感觉是时候分享一波小技术了o(^▽^)o，嗯今天就分享一个关于项目中如何用ajax上传图片的小知识。。你准备好了吗。。。？？">
-<meta name="twitter:image" content="https://yebuq.github.io/../../../../img/2017-3/6aa2976egx6CHgSChhS88&690.jpg">
+<meta name="twitter:image" content="https://yebuq.github.io/img/2017-3/6aa2976egx6CHgSChhS88&690.jpg">
   
     <link rel="alternative" href="/atom.xml" title="耶不q的部落格" type="application/atom+xml">
   
@@ -190,7 +192,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>摘要:<br>    　　好久没有更新博文了。。。感觉是时候分享一波小技术了o(^▽^)o，嗯今天就分享一个关于项目中如何用ajax上传图片的小知识。。你准备好了吗。。。？？<br>    <div align="center"><br>    <img src="../../../../img/2017-3/6aa2976egx6CHgSChhS88&690.jpg" width="700" height="500"><br>    </div><br>    <a id="more"></a><br>正文：<br>    　　问题是这样的，项目里遇到一个表格里添加一行的操作，所以这个没有办法用表单提交，别的都好好说，用ajax传一个json字符串给后台就好了，但是这个图片就没办法跟json字符串一块传过去了。所以网上找到了这个方法，觉得写的很好很常用，所以还是写在自己的博客里方便分享。话不多说直接上代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</div><div class="line">formData.append(<span class="string">'file'</span>, $(<span class="string">'#up_img_add'</span>)[<span class="number">0</span>].files[<span class="number">0</span>]);</div><div class="line">$.ajax(&#123;</div><div class="line">    <span class="attr">url</span>: <span class="string">"../../rest/group/upload"</span>,</div><div class="line">    <span class="attr">method</span>: <span class="string">"POST"</span>,</div><div class="line">    <span class="attr">async</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">contentType</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">processData</span>: <span class="literal">false</span>, <span class="comment">//必须false才会自动加上正确的Content-Type,</span></div><div class="line">    data: formData,</div><div class="line">    <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(data);</div><div class="line">        equipGroup.image = data;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+        <p>摘要:<br>    　　好久没有更新博文了。。。感觉是时候分享一波小技术了o(^▽^)o，嗯今天就分享一个关于项目中如何用ajax上传图片的小知识。。你准备好了吗。。。？？<br>    <div align="center"><br>    <img src="../../../../img/2017-3/6aa2976egx6CHgSChhS88&690.jpg" width="700" height="500"><br>    </div><br>    <a id="more"></a><br>正文：<br>    　　问题是这样的，项目里遇到一个表格里添加一行的操作，所以这个没有办法用表单提交，别的都好好说，用ajax传一个json字符串给后台就好了，但是这个图片就没办法跟json字符串一块传过去了。所以网上找到了这个方法，觉得写的很好很常用，所以还是写在自己的博客里方便分享。话不多说直接上代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</div><div class="line">formData.append(<span class="string">'file'</span>, $(<span class="string">'#up_img_add'</span>)[<span class="number">0</span>].files[<span class="number">0</span>]);</div><div class="line">$.ajax(&#123;</div><div class="line">    url: <span class="string">"../../rest/group/upload"</span>,</div><div class="line">    method: <span class="string">"POST"</span>,</div><div class="line">    <span class="keyword">async</span>: <span class="literal">false</span>,</div><div class="line">    contentType: <span class="literal">false</span>,</div><div class="line">    processData: <span class="literal">false</span>, <span class="comment">//必须false才会自动加上正确的Content-Type,</span></div><div class="line">    data: formData,</div><div class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(data);</div><div class="line">        equipGroup.image = data;</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <p>　　这里首先创建一个FormData()对象，一开始不知道，百度一下才知道FormData()这个对象真的是个好东西，可以保存的东西有名为”username”，”accountnum”，”userfile” 以及 “webmasterfile” 的字段名，字段 “userfile” 和 “webmasterfile” 的值都包含了一个文件，”accountnum” 的数字被自动转换为字符，”webmasterfile” 字段的值不是一个字符串,还是一个 Blob 对象。例：<br><figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oMyForm = <span class="built_in">new</span> FormData();</div><div class="line"></div><div class="line">oMyForm.<span class="built_in">append</span>(<span class="string">"username"</span>, <span class="string">"Groucho"</span>);</div><div class="line">oMyForm.<span class="built_in">append</span>(<span class="string">"accountnum"</span>, <span class="number">123456</span>); <span class="comment">// 数字123456被立即转换成字符串"123456"</span></div><div class="line"></div><div class="line"><span class="comment">// fileInputElement中已经包含了用户所选择的文件</span></div><div class="line">oMyForm.<span class="built_in">append</span>(<span class="string">"userfile"</span>, fileInputElement.files[<span class="number">0</span>]);</div><div class="line"></div><div class="line"><span class="keyword">var</span> oFileBody = <span class="string">"&lt;a id="</span>a<span class="string">"&gt;&lt;b id="</span>b<span class="string">"&gt;hey!&lt;/b&gt;&lt;/a&gt;"</span>; <span class="comment">// Blob对象包含的文件内容</span></div><div class="line"><span class="keyword">var</span> oBlob = <span class="built_in">new</span> Blob([oFileBody], &#123; <span class="keyword">type</span>: <span class="string">"text/xml"</span>&#125;);</div><div class="line"></div><div class="line">oMyForm.<span class="built_in">append</span>(<span class="string">"webmasterfile"</span>, oBlob);</div></pre></td></tr></table></figure></p>
 <p>　　用 formData.append(‘file’, $(‘#up_img_add’)[0].files[0])这个给创建的formData对象插入你要上传的input标签的files值，然后就可以用ajax上传啦！但是上传的时候要注意两点：<br>　　1.contentType: false, processData: false, 这两句话一定要加上，不然jquery的ajax会默认给你加上错误的头部type类型。<br>　　2.data这个字段是不需要定义的，加上之后会发生意想不到的错误。<br>　　然后后台接收到图片以后会保存在一个目录下面，然后把这个目录的url地址返回给我们，我们就可以调用啦！大功告成~<br>　　<div align="center"><br>    <img src="../../../../img/2017-3/ChMkJlcZuB-ILohjABj4B9nSpLsAAQZdAG1MEUAGPgf978.jpg" width="700" height="500"><br>    </div></p>
 
@@ -472,15 +474,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">开篇之作</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">eclipse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+                <a href="javascript:void(0)" class="js-tag color4">啦啦啦</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -496,7 +494,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">跨域</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">构造函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">业务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -512,23 +538,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">啦啦啦</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ajax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mongoDB</a>
+                <a href="javascript:void(0)" class="js-tag color4">聊天室</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -536,7 +546,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">开篇之作</a>
+                <a href="javascript:void(0)" class="js-tag color3">mongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,7 +558,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">聊天室</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
